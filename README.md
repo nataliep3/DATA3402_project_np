@@ -1,37 +1,29 @@
 ![](UTA-DataScience-Logo.png)
 
-# Project Title
+# PCOS Diagnosis Prediction Project
 
-* **One Sentence Summary** Ex: This repository holds an attempt to apply LSTMs to Stock Market using data from
-"Get Rich" Kaggle challenge (provide link). 
+This repository outlines my process to use a linear regression model to predict PCOS diagnoses using "PCOS Diagnosis Dataset" from Kaggle, found [here](https://www.kaggle.com/datasets/samikshadalvi/pcos-diagnosis-dataset?resource=download)
 
 ## Overview
 
-* This section could contain a short paragraph which include the following:
-  * **Definition of the tasks / challenge**  Ex: The task, as defined by the Kaggle challenge is to use a time series of 12 features, sampled daily for 1 month, to predict the next day's price of a stock.
-  * **Your approach** Ex: The approach in this repository formulates the problem as regression task, using deep recurrent neural networks as the model with the full time series of features as input. We compared the performance of 3 different network architectures.
-  * **Summary of the performance achieved** Ex: Our best model was able to predict the next day stock price within 23%, 90% of the time. At the time of writing, the best performance on Kaggle of this metric is 18%.
+The task, as defined by the Kaggle challenge is to use a dataset containing PCOS patient data containing 6 features, to predict PCOS diagnosis. The approach in this repository follows a simple linear regression model and an iteration of this model with hyperparameter adjustments. This model was able to identify 95% of women with a PCOS diagnosis. As of the time this was written, the best recall performance on Kaggle is 96%. 
 
 ## Summary of Workdone
-
-Include only the sections that are relevant an appropriate.
 
 ### Data
 
 * Data:
-  * Type: For example
-    * Input: medical images (1000x1000 pixel jpegs), CSV file: image filename -> diagnosis
-    * Input: CSV file of features, output: signal/background flag in 1st column.
-  * Size: How much data?
-  * Instances (Train, Test, Validation Split): how many data points? Ex: 1000 patients for training, 200 for testing, none for validation
+  * Type: CSV file of entirely numerical features
+  * Size: 1000 rows of unique entries
+  * Instances (Train, Test, Validation Split): 800 patients for training, 200 for testing, none for validation
 
 #### Preprocessing / Clean up
 
-* Describe any manipulations you performed to the data.
+* Data was scaled for normalization purposes
 
 #### Data Visualization
 
-Show a few visualization of the data and say a few words about what you see.
+
 
 ### Problem Formulation
 
