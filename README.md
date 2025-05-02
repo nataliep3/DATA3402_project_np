@@ -23,6 +23,7 @@ The task, as defined by the Kaggle challenge is to use a dataset containing PCOS
 
 #### Data Visualization
 
+The histograms show that there are a couple binary categories, such as Menstrual_Irregularity. Upon further examination, the features are relatively well spread out across their respective ranges, except for  
 
 
 ### Problem Formulation
