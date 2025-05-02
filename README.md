@@ -29,12 +29,11 @@ The histograms show that there are a couple binary categories, such as Menstrual
 
 ### Problem Formulation
 
-* Define:
-  * Input: features in dataset ('Age', 'BMI', 'Menstrual_Irregularity', 'Testosterone_Level(ng/dL)', 'Antral_Follicle_Count')
-  * Output: PCOS diagnosis prediction
-  * Models:
-    * I attemped only a linear regression model, since the data was too simple for more complex models
-  * I chose to adjust the class_weight hyperparameter, since there is a noticable imbalance between class_0 and class_1
+* Input: features in dataset ('Age', 'BMI', 'Menstrual_Irregularity', 'Testosterone_Level(ng/dL)', 'Antral_Follicle_Count')
+* Output: PCOS diagnosis prediction
+* Models:
+  * I attemped only a linear regression model, since the data was too simple for more complex models
+* I chose to adjust the class_weight hyperparameter, since there is a noticable imbalance between class_0 and class_1
 
 ### Training
 
@@ -50,73 +49,29 @@ The histograms show that there are a couple binary categories, such as Menstrual
 
 * I chose recall as my key performance metric
 
+The table below displays the evaluation metrics for both model iterations
 ![](metrics_table.png)
 
-This table displays the evaluation metrics for both model iterations
-
+The visualizations below show the confusion matrices for both model iterations
 ![](confusion_matrices.png)
-
-These visualizations show the confusion matrices for both model iterations
 
 ### Conclusions
 
-* State any conclusions you can infer from your work. Example: LSTM work better than GRU.
+* Using weights in the class_balance hyperparameter greatly increased model recall performance, however I don't believe that this is entirely reliable, as the dataset is hindered by it's small size and class imbalances.
 
 ### Future Work
 
-* What would be the next thing that you would try.
-* What are some other studies that can be done starting from here.
-
-## How to reproduce results
-
-* In this section, provide instructions at least one of the following:
-   * Reproduce your results fully, including training.
-   * Apply this package to other data. For example, how to use the model you trained.
-   * Use this package to perform their own study.
-* Also describe what resources to use for this package, if appropirate. For example, point them to Collab and TPUs.
+* I would like to try more models for this dataset, such as KNN
+* I would also like to try different techniques for creating synthetic data to 1. have more data to work with, and 2. handle class imbalances
 
 ### Overview of files in repository
 
-* Describe the directory structure, if any.
-* List all relavent files and describe their role in the package.
-* An example:
-  * utils.py: various functions that are used in cleaning and visualizing data.
-  * preprocess.ipynb: Takes input data in CSV and writes out data frame after cleanup.
-  * visualization.ipynb: Creates various visualizations of the data.
-  * models.py: Contains functions that build the various models.
-  * training-model-1.ipynb: Trains the first model and saves model during training.
-  * training-model-2.ipynb: Trains the second model and saves model during training.
-  * training-model-3.ipynb: Trains the third model and saves model during training.
-  * performance.ipynb: loads multiple trained models and compares results.
-  * inference.ipynb: loads a trained model and applies it to test data to create kaggle submission.
-
-* Note that all of these notebooks should contain enough text for someone to understand what is happening.
-
-### Software Setup
-* List all of the required packages.
-* If not standard, provide or point to instruction for installing the packages.
-* Describe how to install your package.
-
-### Data
-
-* Point to where they can download the data.
-* Lead them through preprocessing steps, if necessary.
-
-### Training
-
-* Describe how to train the model
-
-#### Performance Evaluation
-
-* Describe how to run the performance evaluation.
-
-
-## Citations
-
-* Provide any references.
-
-
-
+* File descriptions:
+  * initial_look.ipynb: Takes CSV file and returns basic exploratory data analysis
+  * data_visualization.ipynb: Takes the input data and creates histograms based on target classes
+  * data_preprocessing.ipynb: Handles all preprocessing steps necessary for model training
+  * baseline_model.ipynb: Trains the baseline model and provides evaluation metrics/confusion matrix
+  * model_iteration: Trains the iterative model and provides evauluation metrics/confusion matrix
 
 
 
