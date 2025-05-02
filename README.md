@@ -26,6 +26,8 @@ The task, as defined by the Kaggle challenge is to use a dataset containing PCOS
 ![](histograms.png)
 The histograms show that there is a binary category, Menstrual_Irregularity. Upon further examination, the features are relatively well spread out across their respective ranges.
 
+![](class_histograms.ping)
+These historgrams show the differences in distributions between each class before standardization.
 
 ### Problem Formulation
 
