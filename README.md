@@ -23,29 +23,34 @@ The task, as defined by the Kaggle challenge is to use a dataset containing PCOS
 
 #### Data Visualization
 
-The histograms show that there are a couple binary categories, such as Menstrual_Irregularity. Upon further examination, the features are relatively well spread out across their respective ranges, except for  
+![](histograms.png)
+The histograms show that there are a couple binary categories, such as Menstrual_Irregularity. Upon further examination, the features are relatively well spread out across their respective ranges.
 
 
 ### Problem Formulation
 
 * Define:
-  * Input / Output
-  * Models
-    * Describe the different models you tried and why.
-  * Loss, Optimizer, other Hyperparameters.
+  * Input: features in dataset ('Age', 'BMI', 'Menstrual_Irregularity', 'Testosterone_Level(ng/dL)', 'Antral_Follicle_Count')
+  * Output: PCOS diagnosis prediction
+  * Models:
+    * I attemped only a linear regression model, since the data was too simple for more complex models
+  * I chose to adjust the class_weight hyperparameter, since there is a noticable imbalance between class_0 and class_1
 
 ### Training
 
 * Describe the training:
-  * How you trained: software and hardware.
-  * How did training take.
-  * Training curves (loss vs epoch for test/train).
-  * How did you decide to stop training.
-  * Any difficulties? How did you resolve them?
+  * How you trained:
+    * Software: I trained the model using Python within a Jupyter Notebook environment. The libraries used include:
+      * pandas and numpy to manipulate data
+      * sci-kit learn to build models
+      * matplotlib and seaborn to create visualizations
+    * Hardware: All training and testing was done on my personal MacBook Air
+  * Training was incredibly quick, since the dataset was so small
+  * There were no significant difficulties I encountered, since the initial dataset was clean and well-prepared
 
 ### Performance Comparison
 
-* Clearly define the key performance metric(s).
+* I chose recall as my key performance metric
 * Show/compare results in one table.
 * Show one (or few) visualization(s) of results, for example ROC curves.
 
