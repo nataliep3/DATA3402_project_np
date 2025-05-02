@@ -38,21 +38,25 @@ The histograms show that there are a couple binary categories, such as Menstrual
 
 ### Training
 
-* Describe the training:
-  * How you trained:
-    * Software: I trained the model using Python within a Jupyter Notebook environment. The libraries used include:
-      * pandas and numpy to manipulate data
-      * sci-kit learn to build models
-      * matplotlib and seaborn to create visualizations
-    * Hardware: All training and testing was done on my personal MacBook Air
-  * Training was incredibly quick, since the dataset was so small
-  * There were no significant difficulties I encountered, since the initial dataset was clean and well-prepared
+* Software: I trained the model using Python within a Jupyter Notebook environment. The libraries used include:
+   * pandas and numpy to manipulate data
+   * sci-kit learn to build models
+   * matplotlib and seaborn to create visualizations
+* Hardware: All training and testing was done on my personal MacBook Air
+   * Training was incredibly quick, since the dataset was so small
+   * There were no significant difficulties I encountered, since the initial dataset was clean and well-prepared
 
 ### Performance Comparison
 
 * I chose recall as my key performance metric
-* Show/compare results in one table.
-* Show one (or few) visualization(s) of results, for example ROC curves.
+
+![](metrics_table.png)
+
+This table displays the evaluation metrics for both model iterations
+
+![](confusion_matrices.png)
+
+These visualizations show the confusion matrices for both model iterations
 
 ### Conclusions
 
