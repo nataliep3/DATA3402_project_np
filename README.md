@@ -13,7 +13,7 @@ The task, as defined by the Kaggle challenge is to use a dataset containing PCOS
 ### Data
 
 * Data:
-  * Type: CSV file of entirely numerical features
+  * Type: CSV file tabular data consisting of entirely numerical features
   * Size: 1000 rows of unique entries
   * Instances (Train, Test, Validation Split): 800 patients for training, 200 for testing, none for validation
 
